@@ -96,3 +96,6 @@ def ranking(population):
         return population[i]
     else:
         raise Exception("No optimization specified (min or max).")
+
+
+
