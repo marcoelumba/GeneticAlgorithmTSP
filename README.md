@@ -17,6 +17,10 @@ The TSP problem asks the following question: “Given a list of cities and the d
 
 # An example result
 
-Initial run (50 runs by 100 generations) with 0.9 crossover probablity and 0.15 mutation probability using Euclidean distance formula to calculate fitness
+##### Initial run (50 runs by 100 generations) with 0.9 crossover probablity and 0.15 mutation probability using Euclidean distance formula to calculate fitness
 
-<img width="382" alt="image" src="https://user-images.githubusercontent.com/1595062/170859756-3ae1ada6-ddca-444f-b687-31dcad0d28ec.png">
+![Eucledian Distance](https://user-images.githubusercontent.com/1595062/170859837-1b55cf7b-9534-4960-b796-09d9b7f536e6.png)
+
+##### Initial run (50 runs by 100 generations) with 0.9 crossover probablity and 0.15 mutation probability using Manhattan distance formula to calculate fitness
+
+![Manhattan Distance](https://user-images.githubusercontent.com/1595062/170859859-cbea1ca5-15a2-44df-8682-727f03ff5cf5.png)
