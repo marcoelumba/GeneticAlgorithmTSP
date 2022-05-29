@@ -1,6 +1,5 @@
 import time
 import itertools
-from tqdm import notebook as tq
 from charles.charles import Travel
 from charles.selection import fps, tournament, ranking
 from charles.mutation import swap_mutation, inversion_mutation, insert_mutation
