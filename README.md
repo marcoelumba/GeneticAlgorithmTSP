@@ -7,7 +7,7 @@ This project is an adaption of a Genetic Algorithm (GA) for computer optimizatio
 
 The TSP problem asks the following question: “Given a list of cities and the distance between each pair of cities, what is the shortest possible route that visits each city exactly once and returns to the origin city?” There are many other similar implementations and use cases that a TSP optimization can be applied to. Various operations in GA can be used in solving TSP problems but not all GA operations would apply in TSP optimisation. In this code the following operations are implemented for TSP: 
 
-*	in fitness *distance* -  euclidean distance, manhattan distance, 
+*	in fitness *distance* -  euclidean distance and manhattan distance 
 *	in selection - fitness proportion, tournament and ranking 
 *	in crossover - partially matched crossover, single point crossover, cycle crossover and two-points crossover
 *	in mutation - swap mutation, inversion mutation, and insert mutation
