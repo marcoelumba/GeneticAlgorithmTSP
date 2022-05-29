@@ -1,5 +1,6 @@
 import time
 import itertools
+from tqdm import notebook as tq
 from charles.charles import Travel
 from charles.selection import fps, tournament, ranking
 from charles.mutation import swap_mutation, inversion_mutation, insert_mutation
@@ -65,8 +66,8 @@ if __name__ == '__main__':
         read_location(d3)
 
         # Creating a combination of algorithms to run
-        list_algorithms = [[fps, tournament, ranking()],
-                           [inversion_mutation, insert_mutation, swap_mutation()],
+        list_algorithms = [[fps, tournament, ranking],
+                           [inversion_mutation, insert_mutation, swap_mutation],
                            [single_point_co, two_points_co, cycle_co, new_pmx_co]]
 
         # Initializing a combination of algorithms to run
@@ -77,6 +78,8 @@ if __name__ == '__main__':
 
         # From here starts the running of the combination of algorithms and run it <number_of_runs> times
         for idx, a in enumerate(algorithms):
+
+            print(f"Running algorithm combination: Selection={a[0].__name__} : Crossover={a[2].__name__} : Mutation={a[1].__name__}")
             # Running each algorithm at i number of runs
             for i in range(number_of_runs):
 
@@ -90,7 +93,7 @@ if __name__ == '__main__':
                 )
 
                 travel.evolve(
-                    gens=1000,
+                    gens=100,
                     select=a[0], # fps, tournament, ranking
                     crossover=a[2], # pmx_co, single_point_co, two_points_co
                     mutate=a[1], # swap_mutation, inversion_mutation, insert_mutation
@@ -107,7 +110,3 @@ if __name__ == '__main__':
     except Exception as e:
         print(e)
         band = False
-
-
-
-
